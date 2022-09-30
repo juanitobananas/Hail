@@ -43,6 +43,15 @@
         <item>su_disable</item>
         <item>shizuku_disable</item>
     </string-array>
+    <string-array name="auto_freeze_tags_entries">
+        <item>Default</item>
+        <item>A test tag</item>
+    </string-array>
+    <string-array name="auto_freeze_tags_values">
+        <item>default</item>
+        <item>a_test_tag</item>
+    </string-array>
+    <string-array name="empty_array"/>
     <string-array name="donate_payment_entries">
         <item>@string/donate_alipay</item>
         <item>@string/donate_wechat</item>
