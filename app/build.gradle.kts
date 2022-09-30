@@ -10,14 +10,14 @@ android {
     buildToolsVersion = "33.0.0"
 
     defaultConfig {
-        applicationId = "com.aistra.hail"
+        applicationId = "com.aistra.hail.alpha"
         minSdk = 23
         targetSdk = 33
         versionCode = 18
         versionName = "0.9.7"
         resourceConfigurations += arrayOf("en", "es", "it", "ja-rJP", "ru", "zh-rCN", "zh-rTW")
     }
-    signingConfigs {
+    /*signingConfigs {
         create("release") {
             val props = Properties().apply { load(file("../signing.properties").reader()) }
             storeFile = file(props.getProperty("storeFile"))
@@ -25,16 +25,16 @@ android {
             keyAlias = props.getProperty("keyAlias")
             keyPassword = props.getProperty("keyPassword")
         }
-    }
+    }*/
     buildTypes {
         debug {
             versionNameSuffix = "-alpha"
-            signingConfig = signingConfigs.getByName("release")
+            // signingConfig = signingConfigs.getByName("release")
         }
         release {
             isMinifyEnabled = true
             isShrinkResources = true
-            signingConfig = signingConfigs.getByName("release")
+            // signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
